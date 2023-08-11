@@ -32,7 +32,7 @@ const routes: any =
 
 
 const AppRouter = createBrowserRouter(
-    routes
+    routes,{basename: "/app"}
 );
 
 export default AppRouter;

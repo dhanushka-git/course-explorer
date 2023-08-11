@@ -1,18 +1,19 @@
 import {Box} from "@chakra-ui/react";
-import {Outlet} from "react-router-dom";
+import React from "react";
+import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 const MainLayout = () => {
 
     return (
         <>
             <Box className="">
-                {/*<Navigation isLogged={isLogged} />*/}
+                <Navigation/>
             </Box>
             <Box className=" overflow-auto">
-                <Outlet/>
             </Box>
             <Box>
-                {/*<Footer />*/}
+                <Footer/>
             </Box>
         </>)
 }
