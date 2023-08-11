@@ -1,7 +1,7 @@
 const CourseView = () => {
     return (
         <div>
-            <h1>CourseView</h1>
+            <h1>CourseVissew</h1>
         </div>
     )
 }
