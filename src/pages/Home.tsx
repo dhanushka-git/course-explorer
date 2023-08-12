@@ -1,7 +1,14 @@
+import React from "react";
+import HeroSection from "../components/HeroSection";
+import RecentCourses from "../components/RecentCourses";
+import TestimonialSection from "../components/TestimonialSection";
+
 const Home = () => {
     return (
         <>
-            <h1>Homekkkkkkkkkkkkkk</h1>
+            <HeroSection/>
+            <RecentCourses/>
+            <TestimonialSection/>
         </>
     )
 }

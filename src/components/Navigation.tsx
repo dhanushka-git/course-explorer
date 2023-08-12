@@ -42,7 +42,7 @@ const Navigation = () => {
                                     navigate("/");
                                 }}
                             >
-                                Course Finder
+                                Course Explorer
                             </Text>
                         </Box>
                         <HStack
@@ -55,8 +55,8 @@ const Navigation = () => {
                                     key={link.name}
                                     className="font-bold text-lg cursor-pointer text-white "
                                     onClick={() => {
-                                        if (link.auth === true) {
-                                            isLogged === true
+                                        if (link.auth) {
+                                            isLogged
                                                 ? navigate(link.path)
                                                 : navigate("/login");
                                         } else {
