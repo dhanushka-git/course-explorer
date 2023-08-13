@@ -1,7 +1,7 @@
 import * as React from "react"
 import {RouterProvider} from "react-router-dom";
-import AppRouter from "./router";
 import {ToastContainer} from "react-toastify";
+import AppRouter from "../src/router";
 
 const App = () => {
     return (
