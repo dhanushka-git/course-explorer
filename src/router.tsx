@@ -3,12 +3,12 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
 import Contact from "./pages/Contact";
+import Courses from "./pages/Courses";
 import Register from "./pages/Register";
 import CourseView from "./pages/CourseView";
 import {MainLayout} from "./components/MainLayout";
 import CourseUpload from "./pages/CourseUpload";
 import {createBrowserRouter} from "react-router-dom";
-import Courses from "./pages/Courses";
 
 
 const routes: any =
@@ -31,7 +31,7 @@ const routes: any =
     ]
 
 
-const AppRouter = createBrowserRouter(
+const AppRouter= createBrowserRouter(
     routes, {basename: "/app"}
 );
 
