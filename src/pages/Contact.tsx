@@ -79,10 +79,10 @@ const Contact = () => {
 
                                         <Button
                                             colorScheme="blue"
-                                            bg="teal.400"
+                                            bg="blue.400"
                                             color="white"
                                             _hover={{
-                                                bg: "teal.500",
+                                                bg: "blue.500",
                                             }}
                                         >
                                             Send Message

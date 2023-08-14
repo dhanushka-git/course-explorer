@@ -1,5 +1,5 @@
 import React from "react";
-import {FaInstagram, FaTwitter, FaYoutube} from "react-icons/all";
+import {FaInstagram, FaTwitter, FaYoutube} from "react-icons/fa";
 import {Box, chakra, Container, Link, Stack, useColorModeValue, VisuallyHidden, Text} from "@chakra-ui/react";
 import {NavigateFunction, useNavigate} from "react-router-dom";
 
@@ -97,7 +97,7 @@ const Footer = () => {
                         justify={{base: "center", md: "space-between"}}
                         align={{base: "center", md: "center"}}
                     >
-                        <Text className={"text-white"}>© 2022 Course Finder. All rights reserved</Text>
+                        <Text className={"text-white"}>© 2023 Course Explorer. All rights reserved</Text>
                         <Stack direction={"row"} spacing={6} className={'text-white'}>
                             <SocialButton label={"Twitter"} href={"#"}>
                                 <FaTwitter color={'blue'} className={''}/>

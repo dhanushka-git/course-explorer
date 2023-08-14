@@ -19,7 +19,7 @@ const routes: any =
             children: [
                 {path: "/", element: <Home/>},
                 {path: "/courses", element: <Courses/>},
-                {path: "/courses/course-view", element: <CourseView/>},
+                {path: "/course-view", element: <CourseView/>},
                 {path: "/profile", element: <Profile/>},
                 {path: "/upload-course", element: <CourseUpload/>},
                 {path: "/contact", element: <Contact/>}

@@ -29,12 +29,11 @@ const HeroSection = () => {
                             color={useColorModeValue('white', 'white')}
                             lineHeight={'110%'}>
                             Explore the ocean of <br/>
-                            <Text as={'span'} color={'yellow.400'}>
+                            <Text as={'span'} color={'yellow.300'}>
                                 Opportunity
                             </Text>
                         </Heading>
-                        <Text color={'gray.300'}  width={"70%"} className={"m-auto"}>
-
+                        <Text color={'gray.300'} width={"70%"} className={"m-auto"}>
                             Welcome to a world of endless possibilities. Whether you're a student, a professional, or
                             simply curious, Course Explorer is your ultimate destination to discover and enroll in
                             courses that ignite your passion and fuel your ambition. Explore a diverse range of
