@@ -25,7 +25,7 @@ const Navigation = () => {
 
     return (
         <>
-            <Box bg={useColorModeValue("blue.600", "")} px={10} className="">
+            <Box bg={useColorModeValue("blue.700", "")} px={10} className="">
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <IconButton
                         size={"md"}
