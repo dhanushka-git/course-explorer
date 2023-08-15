@@ -3,13 +3,22 @@ import {
     Heading,
     Stack,
     Text,
-    Container, Box, Icon, useColorModeValue, createIcon
+    Box,
+    useColorModeValue
 } from "@chakra-ui/react";
 import React from "react";
 import {useNavigate} from "react-router-dom";
 
 const HeroSection = () => {
     const navigate = useNavigate();
+
+    const onClickLearnMore = () => {
+        navigate('/about');
+    }
+
+    const onClickGetStarted = () => {
+        navigate('/courses');
+    }
 
     return (
         <>
@@ -33,7 +42,7 @@ const HeroSection = () => {
                                 Opportunity
                             </Text>
                         </Heading>
-                        <Text color={'gray.300'} width={"70%"} className={"m-auto"}>
+                        <Text color={'gray.300'} width={"70%"} className={"m-auto"} fontSize={20}>
                             Welcome to a world of endless possibilities. Whether you're a student, a professional, or
                             simply curious, Course Explorer is your ultimate destination to discover and enroll in
                             courses that ignite your passion and fuel your ambition. Explore a diverse range of
@@ -47,6 +56,7 @@ const HeroSection = () => {
                             alignSelf={'center'}
                             position={'relative'}>
                             <Button
+                                onClick={onClickGetStarted}
                                 colorScheme={'green'}
                                 bg={'green.400'}
                                 rounded={'full'}
@@ -56,10 +66,9 @@ const HeroSection = () => {
                                 }}>
                                 Get Started
                             </Button>
-                            <Button variant={'link'} color={"white"} size={'md'}>
+                            <Button variant={'link'} color={"white"} size={'md'} onClick={onClickLearnMore}>
                                 Learn more
                             </Button>
-
                         </Stack>
                     </Stack>
                 </Box>
