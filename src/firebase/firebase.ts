@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import {initializeApp} from "firebase/app";
+import {getFirestore} from "firebase/firestore";
 
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyAZV2gijzMCAENScNOxc9OkA47YDNVHLzw",
     authDomain: "course-explorer-549b9.firebaseapp.com",
     projectId: "course-explorer-549b9",
@@ -12,6 +12,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+export const db = getFirestore(firebaseApp);
+export default firebaseApp;
