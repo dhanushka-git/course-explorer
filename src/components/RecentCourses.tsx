@@ -13,43 +13,43 @@ const RecentCourses = () => {
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     }, {
-        id: 1,
+        id: 2,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 3,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 4,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 5,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 6,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 7,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl. Sed euismod, diam sit amet dictum aliquam, nunc massa tincidunt urna, vitae aliquam nisl nunc eu nisl."
     },{
-        id: 1,
+        id: 8,
         name: "Course 1",
         institute: "Institute 1",
         image: "https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_1280.jpg",
