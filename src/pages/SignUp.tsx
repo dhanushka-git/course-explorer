@@ -6,12 +6,13 @@ import {
     InputGroup,
     InputLeftElement, InputRightElement,
     Stack,
-    Image,
     useColorModeValue, chakra
 } from "@chakra-ui/react";
 import React, {useState} from "react";
 import {FaLock, FaUserAlt} from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {toast} from "react-toastify";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -20,14 +21,34 @@ const CFaLock = chakra(FaLock);
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const handleShowClick = () => setShowPassword(!showPassword);
-    const [email, setEmail] = useState("dopssaas@ghj.com");
-    const [password, setPassword] = useState("dsdfdsfsdfsf");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
 
     const signUpHandler = async () => {
-        setIsLoading(true)
-    }
+        const auth = getAuth();
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                setIsLoading(false);
+                navigate("/register", {
+                    state: {
+                        message: {
+                            id: userCredential?.user?.uid,
+                            email: userCredential?.user?.email,
+                        },
+                    },
+                });
+            }).catch((error) => {
+            toast(error?.message, {
+                autoClose: 8000,
+            });
+        }).finally(() => {
+            setIsLoading(false);
+        });
+
+    };
 
 
     return (
@@ -124,5 +145,6 @@ const SignUp = () => {
         </>
     )
 }
+
 
 export default SignUp;

@@ -12,22 +12,43 @@ import {
 import React, {useState} from "react";
 import {FaUserAlt, FaLock,} from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
+import {toast} from "react-toastify";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false)
-    const [isLoading, setIsLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const loginHandler = async () => {
-        setIsLoading(true);
-    }
-
     const handleShowClick = () => setShowPassword(!showPassword);
+
+    const loginHandler = () => {
+        setIsLoading(true);
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential: any) => {
+                const user = userCredential.user;
+                if (user) {
+                    setIsLoading(false);
+                    toast("Login successful", {
+                        autoClose: 8000,
+                    });
+                    navigate("/");
+                }
+            })
+            .catch((error: any) => {
+                setIsLoading(false);
+                toast("Login failed.Please check your credentials", {
+                    autoClose: 8000,
+                });
+                console.error("Error in login", error)
+            });
+    };
 
 
     return (
