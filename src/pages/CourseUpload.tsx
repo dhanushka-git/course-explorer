@@ -197,7 +197,7 @@ const CourseUpload = () => {
                         <Input type=""/>
                     </FormControl>
                     <Button
-                        colorScheme="teal"
+                        colorScheme="blue"
                         size="lg"
                         width={"100%"}
                         marginTop={4}

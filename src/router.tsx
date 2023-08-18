@@ -8,7 +8,8 @@ import Register from "./pages/Register";
 import CourseView from "./pages/CourseView";
 import {MainLayout} from "./components/MainLayout";
 import CourseUpload from "./pages/CourseUpload";
-import {createBrowserRouter} from "react-router-dom";
+import {useAuthContext} from "./contexts/auth-context";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 
 
 const routes: any =
@@ -20,8 +21,8 @@ const routes: any =
                 {path: "/", element: <Home/>},
                 {path: "/courses", element: <Courses/>},
                 {path: "/course-view", element: <CourseView/>},
-                {path: "/profile", element: <Profile/>},
-                {path: "/upload-course", element: <CourseUpload/>},
+                {path: "/profile", element: <PrivateRoute component={Profile}/>},
+                {path: "/upload-course", element: <PrivateRoute component={CourseUpload}/>},
                 {path: "/contact", element: <Contact/>}
             ],
         },
@@ -31,8 +32,18 @@ const routes: any =
     ]
 
 
-const AppRouter= createBrowserRouter(
-    routes, {basename: "/app" }
+const AppRouter = createBrowserRouter(
+    routes
 );
 
 export default AppRouter;
+
+function PrivateRoute({component: Component, path, ...rest}: any) {
+    const context = useAuthContext();
+
+    if (context?.isLogged === false) {
+        return <Navigate to="/login"/>;
+    }
+
+    return <Component {...rest} />;
+}
