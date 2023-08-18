@@ -2,11 +2,15 @@ import * as React from "react"
 import {RouterProvider} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 import AppRouter from "../src/router";
+import AuthContextProvider from "./auth-context";
 
 const App = () => {
+
     return (
         <>
-            <RouterProvider router={AppRouter}/>
+            <AuthContextProvider>
+                <RouterProvider router={AppRouter}/>
+            </AuthContextProvider>
             <ToastContainer/>
         </>
     );
