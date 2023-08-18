@@ -2,14 +2,15 @@ import React, {useState} from "react";
 import {Avatar, Box, Button, Center, useColorModeValue, Wrap, WrapItem} from "@chakra-ui/react";
 import InstituteCourses from "../components/InstituteCourses";
 import {useNavigate} from "react-router-dom";
+import {useAuthContext} from "../contexts/auth-context";
 
 const Profile = () => {
-    const [isLoading, setIsLoading] = useState(true);
-    const [courses, setCourses] = useState([]);
-    const [profileData, setProfileData] = useState<any>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [courses, setCourses] = useState<Array<string>>([]);
+    const [profileData, setProfileData] = useState<any>({type: "institute"});
     const [isEdit, setIsEdit] = useState<boolean>(false);
     const navigate = useNavigate();
-    const isLogged = true
+    const {isLogged} = useAuthContext()
 
 
     return (
@@ -55,11 +56,11 @@ const Profile = () => {
                         <div className="text-center pt-10">
                             <Button
                                 className="m-10"
-                                colorScheme="teal"
+                                colorScheme="blue"
                                 size="md"
                                 width={"60%"}
                                 onClick={() => {
-                                    isLogged ? navigate("/add-course") : navigate("/login");
+                                    isLogged ? navigate("/upload-course") : navigate("/login");
                                 }}
                             >
                                 Upload Course
