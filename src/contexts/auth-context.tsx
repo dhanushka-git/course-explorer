@@ -25,7 +25,7 @@ const AuthContextProvider = ({children}: any) => {
         onAuthStateChanged(auth, (user) => {
 
             if (user) {
-                setIsLogged(false)
+                setIsLogged(true)
                 setUser(user)
             } else {
                 setIsLogged(false)
