@@ -5,17 +5,30 @@ import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 import "./styles/tailwind.css";
 import App from "./App";
+import {applyMiddleware, compose, createStore} from "@reduxjs/toolkit";
+import rootReducer from './reducers'
+import {Provider} from "react-redux";
+import logger from "./middleware/logger";
+import thunkMiddleware from "redux-thunk";
+import monitorReducerEnhancer from "./enhancers/monitorReducer";
 
 
 const container = document.getElementById("root")
 if (!container) throw new Error('Failed to find the root element');
 const root = ReactDOM.createRoot(container)
 
+const middlewareEnhancer = applyMiddleware(logger, thunkMiddleware) // logger must be the last middleware in chain, otherwise it will log thunk and promise, not actual actions
+const composedEnhancers: any = compose(middlewareEnhancer, monitorReducerEnhancer)
+
+const store = createStore(rootReducer, undefined, composedEnhancers)
+
 root.render(
     <React.StrictMode>
         <ColorModeScript/>
         <ChakraProvider theme={theme}>
-            <App/>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </ChakraProvider>
     </React.StrictMode>,
 )
