@@ -1,4 +1,4 @@
-const logger = (store: any) => (next: any) => (action: any) => {
+const loggerMiddleware = (store: any) => (next: any) => (action: any) => {
     console.group(action.type);
     console.log('The action: ', action);
     const returnValue = next(action);
@@ -7,4 +7,4 @@ const logger = (store: any) => (next: any) => (action: any) => {
     return returnValue;
 }
 
-export default logger
+export default loggerMiddleware
