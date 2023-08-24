@@ -2,12 +2,14 @@ import {Box, Grid, Select, Spinner} from "@chakra-ui/react";
 import React, {useState} from "react";
 import CourseCard from "../components/CourseCard";
 import {useNavigate} from "react-router-dom";
+// import {useGetCoursesQuery} from "../features/api/apiSlice";
 
 const Courses = () => {
     const [isLoading, setIsLoading] = React.useState<boolean>(false);
     const [courses, setCourses] = React.useState<any>([{}, {}, {}, {}]);
     const [form, setForm] = useState();
     const navigate = useNavigate();
+    // const { data: courses, isFetching, isSuccess } = useGetCoursesQuery()
 
 
     const handleInputChange = (event: any) => {
