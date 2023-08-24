@@ -1,6 +1,6 @@
 const round = (number: number) => Math.round(number * 100) / 100;
 
-const monitorReducerEnhancer = (createStore: any) => (
+const monitorReducerEnhancer:any = (createStore: any) => (
     reducer: any, initialState: any, enhancer: any) => {
     const monitorReducer = (state: any, action: any) => {
         const start = performance.now();

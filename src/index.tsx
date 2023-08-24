@@ -3,16 +3,16 @@ import App from "./App";
 import * as React from "react"
 import {Provider} from "react-redux";
 import * as ReactDOM from "react-dom/client"
-import configureStore from "../src/configureStore"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 import {ChakraProvider, ColorModeScript, theme} from "@chakra-ui/react"
+import configureAppStore from "../src/configureStore";
 
 const container = document.getElementById("root")
 if (!container) throw new Error('Failed to find the root element');
 const root = ReactDOM.createRoot(container)
 
-const store = configureStore()
+const store = configureAppStore()
 
 
 const renderApp = () =>
