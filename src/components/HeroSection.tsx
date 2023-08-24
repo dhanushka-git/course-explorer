@@ -22,7 +22,6 @@ const HeroSection = () => {
 
     return (
         <>
-
             <Box bg={useColorModeValue("blue.700", "gray.700")} className={' h-[80vh]'}>
                 <Box className={"justify-center"}>
                     <Stack
@@ -73,7 +72,6 @@ const HeroSection = () => {
                     </Stack>
                 </Box>
             </Box>
-
         </>
     )
 }

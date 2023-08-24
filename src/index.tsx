@@ -1,19 +1,16 @@
 import "./styles/tailwind.css";
 import App from "./App";
 import * as React from "react"
+import store from "./app/store";
 import {Provider} from "react-redux";
 import * as ReactDOM from "react-dom/client"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 import {ChakraProvider, ColorModeScript, theme} from "@chakra-ui/react"
-import configureAppStore from "../src/configureStore";
 
 const container = document.getElementById("root")
 if (!container) throw new Error('Failed to find the root element');
 const root = ReactDOM.createRoot(container)
-
-const store = configureAppStore()
-
 
 const renderApp = () =>
     root.render(
@@ -28,7 +25,7 @@ const renderApp = () =>
     )
 
 if (process.env.NODE_ENV !== 'production' && module.hot) {
-    module.hot.accept('./components/App', renderApp)
+    module.hot.accept('./App', renderApp)
 }
 
 renderApp()
